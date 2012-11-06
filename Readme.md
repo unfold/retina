@@ -2,7 +2,8 @@
 
 # retina
 
-  CSS style processor that analyzes your existing stylesheet
+  CSS processor which adds retina declarations where retina version images are found,
+  generates scaled down non-retina images and updates the existing stylesheet
 
 ## Installation
 
