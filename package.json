@@ -1,0 +1,29 @@
+{
+  "name": "retina",
+  "description": "CSS based image scaler",
+  "author": "Simen Brekken <simen@unfold.no>",
+  "keywords": ["image", "retina", "scale", "css"],
+  "version": "0.0.1",
+  "license": "MIT",
+  "bin": {
+    "retina": "./bin/retina"
+  },
+  "main": "./lib/retina",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unfold/retina"
+  },
+  "dependencies": {
+    "canvas": "0.13.x",
+    "css": "1.0.x",
+    "commander": "1.0.x",
+    "mkdirp": "0.3.x"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "engines": {
+    "node": ">= 0.8"
+  }
+}

@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+var program = require('commander'),
+    retina = require('..');
+
+program
+  .version(require('../package.json').version)
+  .usage('[options] <file>')
+  .option('-t, --target <path>', 'target path relative to input file', 'images/generated/scaled')
+  .parse(process.argv);
+
+process.stdout.write(retina(program.args[0], program.target));
