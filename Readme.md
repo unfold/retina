@@ -13,13 +13,14 @@
 
 ```
 
-Usage: retina [options] <file>
+Usage: retina [options] [< in [> out]] [file]
 
 Options:
 
+  -s, --source <path>   source path relative to input file (required when stdin is used)
+  -t, --target <path>   target path relative to input file
   -h, --help            output usage information
   -V, --version         output the version number
-  -t, --target <path>   target path relative to input file
 
 ```
 
@@ -27,6 +28,12 @@ for example:
 
 ```
 $ retina -t images/generated/scaled css/main.css > css/main.scaled.css
+```
+
+or via `stdin`
+
+```
+$ cat css/main.css | retina -s css -t images/generated/scaled > css/main.scaled.css
 ```
 
 ## License
