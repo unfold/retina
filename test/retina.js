@@ -14,6 +14,10 @@ describe('retina', function() {
         retina(fixture('simple'), fixturePath, targetPath).should.equal(fixture('simple.out'));
     });
 
+    it('should not add duplicate retina declarations', function() {
+        retina(fixture('duplicate'), fixturePath, targetPath).should.equal(fixture('duplicate.out'));
+    });
+
     it('should use existing media queries', function() {
         retina(fixture('media-query'), fixturePath, targetPath).should.equal(fixture('media-query.out'));
     });
