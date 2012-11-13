@@ -17,8 +17,8 @@ Usage: retina [options] [< in [> out]] [file]
 
 Options:
 
-  -s, --source <path>   source path relative to input file (required when stdin is used)
-  -t, --target <path>   target path relative to input file
+  -t, --target <path>   target path relative to input
+  -s, --source <path>   source path relative to input (required when stdin is used)
   -h, --help            output usage information
   -V, --version         output the version number
 

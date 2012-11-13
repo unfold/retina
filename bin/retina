@@ -8,8 +8,8 @@ var program = require('commander'),
 program
   .version(require('../package.json').version)
   .usage('[options] [< in [> out]] [file]')
-  .option('-s, --source <path>', 'source path relative to input file (required when stdin is used)')
-  .option('-t, --target <path>', 'target path relative to input file', 'images/generated/scaled')
+  .option('-t, --target <path>', 'target path relative to input', 'images/generated/scaled')
+  .option('-s, --source <path>', 'source path relative to input (required when stdin is used)')
   .parse(process.argv);
 
 var file = program.args[0];
