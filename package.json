@@ -3,7 +3,7 @@
   "description": "CSS based image scaler",
   "author": "Simen Brekken <simen@unfold.no>",
   "keywords": ["image", "retina", "scale", "css"],
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "bin": {
     "retina": "./bin/retina"

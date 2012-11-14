@@ -32,4 +32,8 @@ describe('retina', function() {
         scaled.src = 'test/fixtures/images/generated/scaled/light-blue-circle.png';
         scaled.width.should.equal(original.width / 2);
     });
+
+    it('should use existing path suffix', function() {
+        retina(fixture('path-suffix'), fixturePath, targetPath).should.equal(fixture('path-suffix.out'));
+    });
 });
