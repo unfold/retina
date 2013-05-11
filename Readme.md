@@ -1,40 +1,43 @@
 [![build status](https://secure.travis-ci.org/unfold/retina.png)](http://travis-ci.org/unfold/retina)
 
-# retina
+### Retina
 
-  CSS processor which adds retina declarations where retina version images are found,
-  generates scaled down non-retina images and updates the existing stylesheet
+Retina analyzes your existing CSS files and generates missing non-retina resolution 
+images by resizing their retina resolution counterpart. The result is an updated 
+CSS stylesheet complete with media queries.
+
+This means you'll be able to author your CSS files as if you were only working with
+standard resolution images.
+
+#### No strings attached
+
+Instead of relying on a specific [framework](http://compass-style.org) or 
+[build system](http://gruntjs.com) Retina will work with anything that outputs a CSS file.
 
 ## Installation
 
     $ npm install retina
 
-## retina(1)
+### Usage
 
-```
+    $ retina [options] [file]
 
-Usage: retina [options] [< in [> out]] [file]
+### Options
 
-Options:
+    -t, --target <path>   target path relative to input
+    -s, --source <path>   source path relative to input (required when stdin is used)
+    -h, --help            output usage information
+    -V, --version         output the version number
 
-  -t, --target <path>   target path relative to input
-  -s, --source <path>   source path relative to input (required when stdin is used)
-  -h, --help            output usage information
-  -V, --version         output the version number
+### Examples
 
-```
+#### Generating downscaled images and updating rules of an existing CSS file:
 
-for example:
+    $ retina -t images/scaled main.css > main.scaled.css
 
-```
-$ retina -t images/generated/scaled css/main.css > css/main.scaled.css
-```
+#### Using Retina with [SASS](http://sass-lang.com):
 
-or via `stdin`
-
-```
-$ cat css/main.css | retina -s css -t images/generated/scaled > css/main.scaled.css
-```
+    $ sass css/main.scss | retina --source css --target images/scaled > main.css
 
 ## License
 
